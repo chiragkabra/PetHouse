@@ -30,6 +30,7 @@ Route::get('/logout',[App\Http\Controllers\LoginController::class,'logout'])->na
 //Admin
 Route::get('/admin_dash',[App\Http\Controllers\AdminController::class,'index'])->name('dashboard');
 Route::get('/manage_hostel',[App\Http\Controllers\AdminController::class,'Manage_hostel'])->name('manage_hostel');
+Route::get('/hostel_delete/{id}',[App\Http\Controllers\AdminController::class,'hostel_delete'])->name('hostel_delete');
 
 //Hostel
 Route::group(['middleware' => 'HostelValid'], function () {

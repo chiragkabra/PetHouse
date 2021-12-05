@@ -17,6 +17,7 @@ class HostelController extends Controller
     {
 
         $s=session()->get('hostel');
+        $hostel= new Hostel();
         if($req->input('submit'))
         {
             $req->validate([
@@ -29,7 +30,7 @@ class HostelController extends Controller
                 'help'=>'required|numeric',
                 'description'=>'required'
             ]);
-            $hostel= new Hostel();
+
            $hostel->name=$s->name;
             $hostel->email=$s->email;
             $hostel->country=$req->input('country');

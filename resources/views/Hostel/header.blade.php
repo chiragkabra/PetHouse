@@ -327,7 +327,7 @@
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Food Management</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('food.index')}}">Food Management</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('staff.index')}}">Staff</a></li>
               </ul>
             </div>

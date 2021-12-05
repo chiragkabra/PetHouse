@@ -22,4 +22,9 @@ class AdminController extends Controller
         $hostels=Hostel::All();
         return view('Admin.Manage_Hostel',compact('hostels'));
     }
+    public function hostel_delete(Request $req,$id)
+    {
+        Hostel::find($id)->delete();
+        return redirect()->back()->
+    }
 }
